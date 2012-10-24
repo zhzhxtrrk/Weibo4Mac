@@ -40,4 +40,43 @@
     [[[NSApplication sharedApplication] keyWindow] close];
 }
 
+- (IBAction)selectAll:(id)sender
+{
+    NSWindow *activeWindow = [[NSApplication sharedApplication] keyWindow];
+    if (activeWindow == _window) {
+        [_webView selectAll:self];
+    } else {
+        [_extWebView selectAll:self];
+    }
+}
+
+- (IBAction)copy:(id)sender
+{
+    NSWindow *activeWindow = [[NSApplication sharedApplication] keyWindow];
+    if (activeWindow == _window) {
+        [_webView copy:self];
+    } else {
+        [_extWebView copy:self];
+    }
+}
+
+- (IBAction)cut:(id)sender
+{
+    NSWindow *activeWindow = [[NSApplication sharedApplication] keyWindow];
+    if (activeWindow == _window) {
+        [_webView cut:self];
+    } else {
+        [_extWebView cut:self];
+    }
+}
+
+- (IBAction)paste:(id)sender
+{
+    NSWindow *activeWindow = [[NSApplication sharedApplication] keyWindow];
+    if (activeWindow == _window) {
+        [_webView paste:self];
+    } else {
+        [_extWebView paste:self];
+    }
+}
 @end

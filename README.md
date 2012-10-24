@@ -1,4 +1,4 @@
-= this is a simple sina weibo client for MacOSX
+# this is a simple sina weibo client for MacOSX
 
 Simple but useful.
 
