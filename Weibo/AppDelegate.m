@@ -21,6 +21,7 @@
     // Insert code here to initialize your application
     [_webView.mainFrame loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://m.weibo.cn"]]];
     _webView.UIDelegate = self;
+    _extWebView.UIDelegate = self;
 }
 
 - (BOOL)applicationShouldHandleReopen:(NSApplication *)sender hasVisibleWindows:(BOOL)flag
